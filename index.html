@@ -1,0 +1,234 @@
+<html>
+  <head>
+    <base href="" />
+    <style class="fcc-hide-header">
+      head *,
+      title,
+      meta,
+      link,
+      script {
+        display: none !important;
+      }
+    </style>
+    <script>
+      window.__frameId = "fcc-project-preview-frame";
+      function __fccAlertParent(variant, externalLink) {
+        window.parent.postMessage(
+          {
+            type: "fcc:preview:alert",
+            variant: variant,
+            externalLink: externalLink,
+          },
+          "https://www.freecodecamp.org",
+        );
+      }
+      window.onerror = function (msg) {
+        const string = msg.toLowerCase();
+        if (string.includes("script error")) {
+          msg = "Build error, open your browser console to learn more.";
+        }
+        console.log(msg);
+        return true;
+      };
+      document.addEventListener(
+        "click",
+        function (e) {
+          let element = e.target;
+          while (element && element.nodeName !== "A") {
+            element = element.parentElement;
+          }
+          if (
+            element &&
+            element.nodeName === "A" &&
+            new URL(element.href).hash === ""
+          ) {
+            e.preventDefault();
+            __fccAlertParent("external-link", element.href);
+          }
+          if (element) {
+            const href = element.getAttribute("href");
+            if (!href || (href[0] !== "#" && !href.match(/^https?:\/\//))) {
+              e.preventDefault();
+            } else if (href.match(/^#.+/)) {
+              e.preventDefault();
+              const scrollId = href.substring(1);
+              window.location.hash = scrollId;
+            }
+          }
+        },
+        false,
+      );
+      document.addEventListener(
+        "submit",
+        function (e) {
+          const action = e.target.getAttribute("action");
+          e.preventDefault();
+          if (action && action.match(/https?:\/\//)) {
+            __fccAlertParent("external-form", action);
+          }
+        },
+        false,
+      );
+    </script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>freeCodeCamp News Author Page</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <h1 class="title">freeCodeCamp News Author Page</h1>
+
+    <main>
+      <div id="author-container">
+        <div id="0" class="user-card">
+          <h2 class="author-name">Quincy Larson</h2>
+          <img
+            class="user-img"
+            src="https://www.freecodecamp.org/news/content/images/size/w150/2021/03/Quincy-Larson-photo.jpg"
+            alt="Quincy Larson avatar"
+          />
+          <div class="purple-divider"></div>
+          <p class="bio">The teacher who founded freeCodeCamp.org.</p>
+          <a
+            class="author-link"
+            href="https://www.freecodecamp.org/news/author/quincylarson/"
+            target="_blank"
+            >Quincy Larson's author page</a
+          >
+        </div>
+
+        <div id="1" class="user-card">
+          <h2 class="author-name">Jessica Wilkins</h2>
+          <img
+            class="user-img"
+            src="https://www.freecodecamp.org/news/content/images/size/w150/2021/05/jessica-wilkins-gravatar.jpeg"
+            alt="Jessica Wilkins avatar"
+          />
+          <div class="purple-divider"></div>
+          <p class="bio">I am a musician and a programmer.</p>
+          <a
+            class="author-link"
+            href="https://www.freecodecamp.org/news/author/jessica-wilkins/"
+            target="_blank"
+            >Jessica Wilkins's author page</a
+          >
+        </div>
+
+        <div id="2" class="user-card">
+          <h2 class="author-name">Ihechikara Vincent Abba</h2>
+          <img
+            class="user-img"
+            src="https://www.freecodecamp.org/news/content/images/size/w150/2022/01/IMG_20211016_160158_231.jpg"
+            alt="Ihechikara Vincent Abba avatar"
+          />
+          <div class="purple-divider"></div>
+          <p class="bio">This author's bio can be found in his articles!</p>
+          <a
+            class="author-link"
+            href="https://www.freecodecamp.org/news/author/ihechikara/"
+            target="_blank"
+            >Ihechikara Vincent Abba's author page</a
+          >
+        </div>
+
+        <div id="3" class="user-card">
+          <h2 class="author-name">Jennifer Bland</h2>
+          <img
+            class="user-img"
+            src="https://www.freecodecamp.org/news/content/images/size/w150/2021/05/jennifer-bland-gravatar.jpeg"
+            alt="Jennifer Bland avatar"
+          />
+          <div class="purple-divider"></div>
+          <p class="bio">
+            I am a Senior Software Engineer. Google Developers...
+          </p>
+          <a
+            class="author-link"
+            href="https://www.freecodecamp.org/news/author/ratracegrad/"
+            target="_blank"
+            >Jennifer Bland's author page</a
+          >
+        </div>
+
+        <div id="4" class="user-card">
+          <h2 class="author-name">Kolade Chris</h2>
+          <img
+            class="user-img"
+            src="https://www.freecodecamp.org/news/content/images/size/w150/2023/01/kolade-recent.jpg"
+            alt="Kolade Chris avatar"
+          />
+          <div class="purple-divider"></div>
+          <p class="bio">
+            Web developer and technical writer focusing on fro...
+          </p>
+          <a
+            class="author-link"
+            href="https://www.freecodecamp.org/news/author/kolade/"
+            target="_blank"
+            >Kolade Chris's author page</a
+          >
+        </div>
+
+        <div id="5" class="user-card">
+          <h2 class="author-name">Joel Olawanle</h2>
+          <img
+            class="user-img"
+            src="https://www.freecodecamp.org/news/content/images/size/w150/2022/06/1654890413623.jpg"
+            alt="Joel Olawanle avatar"
+          />
+          <div class="purple-divider"></div>
+          <p class="bio">Frontend Developer &amp; Technical Writer</p>
+          <a
+            class="author-link"
+            href="https://www.freecodecamp.org/news/author/joel-olawanle/"
+            target="_blank"
+            >Joel Olawanle's author page</a
+          >
+        </div>
+
+        <div id="6" class="user-card">
+          <h2 class="author-name">Beau Carnes</h2>
+          <img
+            class="user-img"
+            src="https://www.freecodecamp.org/news/content/images/size/w150/2021/05/beau-carnes-gravatar.jpeg"
+            alt="Beau Carnes avatar"
+          />
+          <div class="purple-divider"></div>
+          <p class="bio">
+            I'm a teacher and developer with freeCodeCamp.org....
+          </p>
+          <a
+            class="author-link"
+            href="https://www.freecodecamp.org/news/author/beau/"
+            target="_blank"
+            >Beau Carnes's author page</a
+          >
+        </div>
+
+        <div id="7" class="user-card">
+          <h2 class="author-name">Njong Emy</h2>
+          <img
+            class="user-img"
+            src="https://www.freecodecamp.org/news/content/images/size/w150/2022/05/pfp.jpeg"
+            alt="Njong Emy avatar"
+          />
+          <div class="purple-divider"></div>
+          <p class="bio">
+            Computer Engineering undergrad, focusing on fronte...
+          </p>
+          <a
+            class="author-link"
+            href="https://www.freecodecamp.org/news/author/afumbom_bingeh/"
+            target="_blank"
+            >Njong Emy's author page</a
+          >
+        </div>
+      </div>
+      <button class="btn" id="load-more-btn">Load More Authors</button>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
